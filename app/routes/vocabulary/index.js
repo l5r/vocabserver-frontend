@@ -1,5 +1,10 @@
 import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
+import monitorCache from 'ember-polling-push-updates/decorators/monitor-cache'
+import monitorModelURI from 'ember-polling-push-updates/decorators/monitor-model-uri'
+
+// @monitorCache('/vocabularies')
+// @monitorModelURI
 export default class VocabulariesShowIndexRoute extends Route {
   @service store;
 

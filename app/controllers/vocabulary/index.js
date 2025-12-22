@@ -4,7 +4,10 @@ import { tracked } from '@glimmer/tracking';
 import { task } from 'ember-concurrency';
 import { inject as service } from '@ember/service';
 import config from 'frontend-vocab-search-admin/config/constants';
+import monitorModelURI from 'ember-polling-push-updates/decorators/monitor-model-uri'
+import monitorCache from 'ember-polling-push-updates/decorators/monitor-cache'
 
+@monitorModelURI
 export default class VocabularyIndexController extends Controller {
   @service store;
   @service router;

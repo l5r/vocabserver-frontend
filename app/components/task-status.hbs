@@ -1,6 +1,7 @@
 <span
-  {{did-update (perform this.monitorTaskProgress @task) @task}}
-  {{did-insert (perform this.monitorTaskProgress @task)}}
+  {{this.monitorModel @task}}
+  {{! did-update (perform this.monitorTaskProgress @task) @task}}
+  {{! did-insert (perform this.monitorTaskProgress @task)}}
 >
   {{#if (eq @task.shortStatus "success")}}
     ✅
@@ -8,7 +9,7 @@
     🟥
   {{else if (eq @task.shortStatus "busy")}}
     ⏳
-  {{else if (eq @task.shortStatus "scheduled")}}  
+  {{else if (eq @task.shortStatus "scheduled")}}
     🕕
   {{/if}}
 </span>
